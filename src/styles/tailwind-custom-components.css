@@ -1,0 +1,115 @@
+.sideBarButton {
+  @apply mt-12;
+  @apply flex;
+  @apply justify-center;
+  @apply px-2;
+  @apply py-2;
+  @apply bg-blue;
+  @apply text-xl;
+  @apply leading-5;
+  @apply text-redLight;
+  @apply rounded-md;
+  @apply mx-auto;
+  @apply cursor-pointer;
+  transition: ease-in-out duration-150
+}
+
+.sideBarButton:hover {
+  @apply text-gray-200;
+  @apply bg-redDark;
+}
+
+.sideBarButton:focus {
+  @apply outline-none;
+  @apply text-gray-200;
+  @apply bg-blue;
+}
+
+.sideBarButton:disabled {
+  @apply outline-none;
+  @apply text-gray-400;
+  @apply bg-gray-200;
+  @apply cursor-not-allowed;
+}
+
+.adminLink {
+  @apply block;
+  @apply px-4;
+  @apply py-2;
+  @apply text-sm;
+  @apply text-center;
+  @apply text-blueDark;
+  @apply cursor-pointer;
+  transition: ease-in-out duration-150
+}
+
+.adminLink:hover {
+  @apply bg-gray-100
+}
+
+.openModal {
+  @apply visible;
+  @apply opacity-100;
+  transition: visibility 0s linear 0.25s, opacity 0.25s linear;
+}
+
+.closeModal {
+  @apply invisible;
+  @apply opacity-0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.openLinks {
+  @apply visible;
+  @apply opacity-100;
+  transition: visibility 0s linear 0.25s, opacity 0.25s linear;
+}
+
+.closeLinks {
+  @apply invisible;
+  @apply opacity-0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.drawerOpen {
+  @apply visible;
+  @apply opacity-100;
+  transition: visibility 0s linear 0.25s, opacity 0.25s linear;
+}
+
+.drawerClose {
+  @apply invisible;
+  @apply opacity-0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.inputBox {
+  @apply border;
+  @apply border-gray-300;
+  @apply rounded-lg;
+  @apply py-2;
+  @apply px-4;
+  @apply block;
+  @apply w-full;
+  @apply appearance-none;
+  @apply leading-normal;
+  @apply flex;
+  @apply mx-auto;
+}
+
+.inputBox:focus {
+  @apply outline-none;
+  @apply shadow-outline;
+}
+
+@media (min-width: 1024px) {
+  .mobileTransition {
+    @apply invisible;
+    @apply opacity-0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  }
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
