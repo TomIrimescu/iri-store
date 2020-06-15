@@ -979,6 +979,28 @@ video {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-5xl {
+  font-size: 3rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.text-blue {
+  --text-opacity: 1;
+  color: #303f9f;
+  color: rgba(48, 63, 159, var(--text-opacity));
+}
+
 .loader:empty {
   position: absolute;
   top: calc(50% - 4em);

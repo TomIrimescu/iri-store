@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -16,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:styles": "postcss src/styles/tailwind.css -o src/styles/styles.css",
+    "build:styles": "postcss src/styles/tailwind/tailwind.css -o src/styles/styles.css",
     "prebuild": "npm run build:styles",
     "prestart": "npm run build:styles"
   },
