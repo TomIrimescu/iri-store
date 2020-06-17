@@ -3,6 +3,7 @@ import { CategoryNavigationMobile } from "./CategoryNavigationMobile";
 import { CategoryNavigation } from "./CategoryNavigation";
 import { ProductList } from './ProductList';
 import { HeaderBar } from './HeaderBar';
+import PaginationControls from "../common/pagination/PaginationControls";
 
 export class Store extends Component {
   state = {
@@ -64,7 +65,8 @@ export class Store extends Component {
 
         <div className="flex flex-col flex-1 overflow-hidden">
           <HeaderBar 
-            sideDrawerToggleClicked={this.sideDrawerToggleEvent} />        
+            sideDrawerToggleClicked={this.sideDrawerToggleEvent} />
+          <PaginationControls />
           <ProductList />
         </div> 
 
