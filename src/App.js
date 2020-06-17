@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { Store } from "./store/Store";
 
-function App() {
-  return (
-    <div>
-      <div className="text-blue text-5xl flex justify-center mt-40">
-        Tomcat has left the building!
-      </div>
-    </div>
-  );
+export class App extends Component {
+
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route path="/store" component={Store} />
+          <Redirect to="/store" />
+        </Switch>
+      </Router>
+    );
+  }
+
 }
 
 export default App;
