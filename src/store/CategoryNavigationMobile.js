@@ -11,25 +11,25 @@ export class CategoryNavigationMobile extends Component {
           <a
             href="/store/products/all"
             className="sideBarButton w-2/3"
-            onClick={this.sideDrawerToggleEvent}>
+            onClick={this.props.sideDrawerCloseClicked}>
             All
           </a>
           <a
             href="/store/products/watersports"
             className="sideBarButton w-2/3"
-            onClick={this.sideDrawerToggleEvent}>
+            onClick={this.props.sideDrawerCloseClicked}>
             Watersports
           </a>
           <a
             href="/store/products/soccer"
             className="sideBarButton w-2/3"
-            onClick={this.sideDrawerToggleEvent}>
+            onClick={this.props.sideDrawerCloseClicked}>
             Soccer
           </a>
           <a
             href="/store/products/chess"
             className="sideBarButton w-2/3"
-            onClick={this.sideDrawerToggleEvent}>
+            onClick={this.props.sideDrawerCloseClicked}>
             Chess
           </a>
         </nav>

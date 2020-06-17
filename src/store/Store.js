@@ -2,16 +2,22 @@ import React, { Component } from "react";
 import { CategoryNavigationMobile } from "./CategoryNavigationMobile";
 import { CategoryNavigation } from "./CategoryNavigation";
 import { ProductList } from './ProductList';
+import { HeaderBar } from './HeaderBar';
 
 export class Store extends Component {
   state = {
-    sidedrawer: true
+    sidedrawer: false
   }
 
-  sideDrawerToggleEvent = () => {
+  sideDrawerCloseEvent = () => {
     this.setState({ sidedrawer: false });
-    console.log(this.state.sidedrawer);
   }
+
+  sideDrawerToggleEvent =() => {
+    this.setState((prevState) => {
+      return {sidedrawer: !prevState.sidedrawer};
+    });
+  };
 
   render() {
     return (
@@ -45,7 +51,8 @@ export class Store extends Component {
                 </svg>
               </button>
             </div>
-            <CategoryNavigationMobile />
+            <CategoryNavigationMobile 
+              sideDrawerCloseClicked={this.sideDrawerCloseEvent} />
           </div>
         </div>
 
@@ -55,7 +62,11 @@ export class Store extends Component {
           </div>
         </div>
 
-        <ProductList />
+        <div className="flex flex-col flex-1 overflow-hidden">
+          <HeaderBar 
+            sideDrawerToggleClicked={this.sideDrawerToggleEvent} />        
+          <ProductList />
+        </div> 
 
       </div>
     );
