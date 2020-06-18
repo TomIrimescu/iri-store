@@ -1063,12 +1063,6 @@ video {
   border-color: rgba(210, 214, 220, var(--border-opacity));
 }
 
-.border-gray-400 {
-  --border-opacity: 1;
-  border-color: #9fa6b2;
-  border-color: rgba(159, 166, 178, var(--border-opacity));
-}
-
 .border-indigoLight {
   --border-opacity: 1;
   border-color: #b3bcf5;
