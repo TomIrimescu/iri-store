@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import onClickOutside from "react-onclickoutside";
 
-class AdminLinks extends Component {
+class HeaderBarLinks extends Component {
   state = {
     links: false
   }
@@ -51,4 +51,4 @@ class AdminLinks extends Component {
 
 }
 
-export default onClickOutside(AdminLinks);
+export default onClickOutside(HeaderBarLinks);

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AdminLinks from "./AdminLinks";
+import HeaderBarLinks from "./HeaderBarLinks";
 
 export class HeaderBar extends Component {
 
@@ -49,7 +49,7 @@ export class HeaderBar extends Component {
                 <i className="fas fa-shopping-cart p-2 pl-2 pr-2"></i>
               </button>
 
-              <AdminLinks />
+              <HeaderBarLinks />
 
             </div>
           </div>

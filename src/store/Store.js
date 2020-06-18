@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { CategoryNavigationMobile } from "./CategoryNavigationMobile";
-import { CategoryNavigation } from "./CategoryNavigation";
+import { StoreNavigationMobile } from "./StoreNavigationMobile";
+import { StoreNavigation } from "./StoreNavigation";
 import { ProductList } from './ProductList';
 import { HeaderBar } from './HeaderBar';
 import PaginationControls from "../common/pagination/PaginationControls";
@@ -15,7 +15,7 @@ export class Store extends Component {
     this.setState({ sidedrawer: false });
   }
 
-  sideDrawerToggleEvent =() => {
+  sideDrawerToggleEvent = () => {
     this.setState((prevState) => {
       return {sidedrawer: !prevState.sidedrawer};
     });
@@ -53,14 +53,14 @@ export class Store extends Component {
                 </svg>
               </button>
             </div>
-            <CategoryNavigationMobile 
+            <StoreNavigationMobile 
               sideDrawerCloseClicked={this.sideDrawerCloseEvent} />
           </div>
         </div>
 
         <div className="desktopTransition hidden md:flex md:flex-shrink-0">
           <div className="flex flex-col w-64 bg-blueDark">
-          <CategoryNavigation />
+          <StoreNavigation />
           </div>
         </div>
 
