@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import HeaderBarLinks from "./HeaderBarLinks";
+import { CartSummary } from './CartSummary';
 
 export class HeaderBar extends Component {
 
   render() {
+    console.log(this.props.children);
 
     return (
         <div className="relative z-10 flex-shrink-0 flex h-16 bg-white shadow">
@@ -38,19 +39,13 @@ export class HeaderBar extends Component {
               </div>
             </div>
             <div className="ml-4 flex items-center md:ml-6">
-              <span
-                className="sm:visible md:visible lg:visible invisible text-indigoLight"
-                >Your cart: (empty)
-                </span>
-              <button
-                href="/store/cart"
-                className="p-1 text-indigoLight rounded-full hover:bg-indigoLight hover:text-gray-500 focus:outline-none focus:shadow-outline focus:text-red"
+              <CartSummary />
+              <div 
+                className={`${this.props.isAuthenticated ? 'hide' : ''} text-redLight mr-1 sm:inline-block md:inline-block lg:inline-block hidden`}
               >
-                <i className="fas fa-shopping-cart p-2 pl-2 pr-2"></i>
-              </button>
-
-              <HeaderBarLinks />
-
+                Admin Logged In
+              </div>
+              {this.props.children}
             </div>
           </div>
         </div>

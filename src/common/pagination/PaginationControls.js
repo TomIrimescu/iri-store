@@ -1,7 +1,9 @@
 import React from "react";
+import PaginationButtons from "./PaginationButtons";
 
-const PaginationControls = () => (
+export const PaginationControls = () => (
   <>
+    <PaginationButtons />
     <div className="flex border-b border-gray-300">
       <div className="flex-1"></div>
       <div className="flex-none text-center py-2 pt-0 m-2">

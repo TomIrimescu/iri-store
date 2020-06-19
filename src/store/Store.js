@@ -3,8 +3,9 @@ import { StoreNavigationMobile } from "./StoreNavigationMobile";
 import { StoreNavigation } from "./StoreNavigation";
 import { ProductList } from './ProductList';
 import { HeaderBar } from './HeaderBar';
-import PaginationControls from "../common/pagination/PaginationControls";
-import PaginationButtons from "../common/pagination/PaginationButtons";
+import { PaginationControls } from "../common/pagination/PaginationControls";
+import HeaderBarLinks from './HeaderBarLinks';
+import { LinksToAdmin } from './LinksToAdmin';
 
 export class Store extends Component {
   state = {
@@ -22,6 +23,7 @@ export class Store extends Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <div className="h-screen flex overflow-hidden bg-gray-100">
 
@@ -66,8 +68,12 @@ export class Store extends Component {
 
         <div className="flex flex-col flex-1 overflow-hidden">
           <HeaderBar 
-            sideDrawerToggleClicked={this.sideDrawerToggleEvent} />
-          <PaginationButtons />
+            isAuthenticated={this.props.isAuthenticated}
+            sideDrawerToggleClicked={this.sideDrawerToggleEvent}>
+              <HeaderBarLinks>
+                <LinksToAdmin />
+              </HeaderBarLinks>
+          </HeaderBar>
           <PaginationControls />
           <ProductList />
         </div> 
