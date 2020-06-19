@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { StoreNavigationMobile } from "./StoreNavigationMobile";
 import { StoreNavigation } from "./StoreNavigation";
 import { ProductList } from './ProductList';
-import { HeaderBar } from './HeaderBar';
+import { HeaderBar } from '../common/header/HeaderBar';
 import { PaginationControls } from "../common/pagination/PaginationControls";
-import HeaderBarLinks from './HeaderBarLinks';
+import HeaderBarLinks from '../common/header/HeaderBarLinks';
 import { LinksToAdmin } from './LinksToAdmin';
 
 export class Store extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CartSummary } from './CartSummary';
+import { CartSummary } from '../../store/CartSummary';
 
 export class HeaderBar extends Component {
 
