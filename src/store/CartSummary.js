@@ -6,7 +6,7 @@ export class CartSummary extends Component {
     return(
       <>
         <span
-          className="sm:visible md:visible lg:visible invisible text-indigoLight"
+          className="sm:visible md:visible lg:visible invisible text-indigoLight ml-2"
         >
           Your cart: (empty)
         </span>

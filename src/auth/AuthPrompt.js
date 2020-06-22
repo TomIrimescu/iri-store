@@ -1,9 +1,29 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import { authWrapper } from "./AuthWrapper";
+import { ValidatedForm } from './../common/forms/ValidatedForm';
 
-export class AuthPrompt extends Component {
-  state = {
-    modal: false
+export const AuthPrompt = withRouter(authWrapper(class extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      errorMessage: null,
+      modal: false
+    }
+    this.defaultAttrs = { required: true };
+    this.formModel = [
+      { label: "Username", attrs: { defaultValue: "admin" } },
+      { label: "Password", attrs: { type: "password" } },
+    ];
   }
+
+  authenticate = (credentials) => {
+    this.props.authenticate(credentials)
+      .catch(err => this.setState({ errorMessage: err.message }))
+      .then(this.props.history.push("/admin"));
+  }
+
 
   modalToggleEvent = () => {
     this.setState((prevState) => {
@@ -14,6 +34,19 @@ export class AuthPrompt extends Component {
   render() {
     return (
       <>
+        {this.state.errorMessage != null &&
+          <h4 className="text-white text-center bg-indigo m-1 p-2">
+            {this.state.errorMessage}
+          </h4>
+        }
+        <ValidatedForm formModel={this.formModel}
+          defaultAttrs={this.defaultAttrs}
+          submitCallback={this.authenticate}
+          submitText="Login"
+          cancelCallback={() => this.props.history.push("/")}
+          cancelText="Cancel"
+        />
+
         <div
           className="fixed top-10 inset-x-0 px-4 pb-6 md:inset-0 md:p-0 md:flex md:items-center md:justify-center sm:inset-0 sm:p-0 sm:flex sm:items-center sm:justify-center"
           id="authPrompt"
@@ -22,7 +55,7 @@ export class AuthPrompt extends Component {
             <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
           </div>
           <div
-            className="mt-2/12 bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:p-6 lg:mt-0"
+            className="my-auto bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:p-6 lg:mt-40"
           >
             <form>
               <div className="pt-4">
@@ -87,6 +120,4 @@ export class AuthPrompt extends Component {
     )
   }
   
-};
-
-export default AuthPrompt;
+}));

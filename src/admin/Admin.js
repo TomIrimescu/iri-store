@@ -74,9 +74,9 @@ export class Admin extends Component {
           <HeaderBar 
             isAuthenticated={this.props.isAuthenticated}
             sideDrawerToggleClicked={this.sideDrawerToggleEvent}>
-               <HeaderBarLinks>
-                <LinksToStore />
-              </HeaderBarLinks>
+            <HeaderBarLinks>
+              <LinksToStore />
+            </HeaderBarLinks>
           </HeaderBar>
 
           <main className="flex-1 relative z-0 overflow-y-auto pb-6 focus:outline-none hideScrollBar">

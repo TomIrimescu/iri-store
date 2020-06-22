@@ -33,7 +33,7 @@ class HeaderBarLinks extends Component {
               />
             </button>
           </div>
-          <div className={`${this.state.links ? 'openLinks' : 'closeLinks'} origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg`}>
+          <div className={`${this.state.links ? 'openLinks' : 'closeLinks'} z-10 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg`}>
             {this.props.children}
           </div>
         </div>

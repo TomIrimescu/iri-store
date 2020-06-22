@@ -6,7 +6,7 @@ export class HeaderBar extends Component {
     console.log(this.props.children);
 
     return (
-        <div className="relative z-10 flex-shrink-0 flex h-16 bg-white shadow">
+        <div className="relative flex-shrink-0 flex h-16 bg-white shadow">
           <button
             className="px-4 border-r border-indigoLight bg-blue text-indigoLight focus:outline-none hover:bg-blueLight focus:bg-blueLight focus:text-red md:hidden"
             onClick={this.props.sideDrawerToggleClicked}
@@ -41,7 +41,7 @@ export class HeaderBar extends Component {
               <div 
                 className={`${this.props.isAuthenticated ? 'hide' : ''} text-redLight mr-1 sm:inline-block md:inline-block lg:inline-block hidden`}
               >
-                Admin Logged In
+                Admin Authenticated
               </div>
               {this.props.children}
             </div>
