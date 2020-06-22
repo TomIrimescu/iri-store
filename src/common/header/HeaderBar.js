@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { CartSummary } from '../../store/CartSummary';
 
 export class HeaderBar extends Component {
 
@@ -39,7 +38,6 @@ export class HeaderBar extends Component {
               </div>
             </div>
             <div className="ml-4 flex items-center md:ml-6">
-              <CartSummary />
               <div 
                 className={`${this.props.isAuthenticated ? 'hide' : ''} text-redLight mr-1 sm:inline-block md:inline-block lg:inline-block hidden`}
               >

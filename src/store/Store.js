@@ -6,6 +6,7 @@ import { HeaderBar } from '../common/header/HeaderBar';
 import { PaginationControls } from "../common/pagination/PaginationControls";
 import HeaderBarLinks from '../common/header/HeaderBarLinks';
 import { LinksToAdmin } from './LinksToAdmin';
+import { CartSummary } from "./CartSummary";
 
 export class Store extends Component {
   state = {
@@ -70,6 +71,7 @@ export class Store extends Component {
           <HeaderBar 
             isAuthenticated={this.props.isAuthenticated}
             sideDrawerToggleClicked={this.sideDrawerToggleEvent}>
+              <CartSummary />
               <HeaderBarLinks>
                 <LinksToAdmin />
               </HeaderBarLinks>
@@ -81,5 +83,4 @@ export class Store extends Component {
       </div>
     );
   }
-
 }

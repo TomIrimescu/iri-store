@@ -8,7 +8,6 @@ export class ProductList extends Component {
         <main className="flex-1 relative z-0 overflow-y-auto pb-6 focus:outline-none hideScrollBar">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 
-            <div>
               <div className="flex-auto p-4">
 
                 <div className="border rounded-md overflow-hidden p-1 mb-2 bg-gray-100">
@@ -132,7 +131,6 @@ export class ProductList extends Component {
                 </div>
 
               </div>
-            </div>
 
           </div>
         </main>

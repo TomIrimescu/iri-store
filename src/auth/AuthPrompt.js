@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export class AuthPrompt extends Component {
   state = {
-    modal: true
+    modal: false
   }
 
   modalToggleEvent = () => {
@@ -15,13 +15,14 @@ export class AuthPrompt extends Component {
     return (
       <>
         <div
-          className="fixed top-10 inset-x-0 px-4 pb-6 sm:inset-0 sm:p-0 sm:flex sm:items-center sm:justify-center"
+          className="fixed top-10 inset-x-0 px-4 pb-6 md:inset-0 md:p-0 md:flex md:items-center md:justify-center sm:inset-0 sm:p-0 sm:flex sm:items-center sm:justify-center"
+          id="authPrompt"
         >
           <div className="fixed inset-0 transition-opacity">
             <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
           </div>
           <div
-            className="bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:p-6"
+            className="mt-2/12 bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:p-6 lg:mt-0"
           >
             <form>
               <div className="pt-4">
@@ -45,8 +46,8 @@ export class AuthPrompt extends Component {
               >
                 Login
               </button>
-              <button href="/" className="sideBarButton w-full mb-10">
-                Storefront
+              <button href="/store" className="sideBarButton w-full mb-10">
+                Cancel
               </button>
             </form>
           </div>
