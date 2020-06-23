@@ -38,10 +38,10 @@ export class ValidatedForm extends Component {
 
     renderElement = (modelItem) => {
         const name = modelItem.name || modelItem.label.toLowerCase();
-        return <div className="form-group" key={ modelItem.label }>
-            <label>{ modelItem.label }</label>
+        return <div className="pt-4" key={ modelItem.label }>
+            <label className="flex justify-left font-medium">{ modelItem.label }</label>
             <ValidationError errors={ this.state.validationErrors[name] } />
-            <input className="form-control" name={ name } ref={ this.registerRef }
+            <input className="inputBox" name={ name } ref={ this.registerRef }
                 { ...this.props.defaultAttrs } { ...modelItem.attrs } />            
         </div>
     }
@@ -50,14 +50,14 @@ export class ValidatedForm extends Component {
         return <React.Fragment>
             { this.props.formModel.map(m => this.renderElement(m))}
             <div className="text-center">
-                <button className="btn btn-secondary m-1" 
+                <button className="sideBarButton w-full mb-8" 
+                        onClick={ this.handleSubmit }>
+                    { this.props.submitText || "Submit"}
+                </button>
+                <button className="sideBarButton w-full mb-10" 
                         onClick={ this.props.cancelCallback }>
                     { this.props.cancelText || "Cancel" }
                 </button>
-                <button className="btn btn-primary m-1" 
-                        onClick={ this.handleSubmit }>
-                    { this.props.submitText || "Submit"}
-                </button>         
             </div>
         </React.Fragment>
     }
