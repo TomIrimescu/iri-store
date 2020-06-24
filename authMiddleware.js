@@ -9,9 +9,7 @@ module.exports = function (req, res, next) {
     if (anonOps.find(op => op.method === req.method 
             && op.urls.find(url => req.url.startsWith(url)))) {
         next();
-    } else 
-    
-    if (req.url === "/login" && req.method === "POST") {
+    } else if (req.url === "/login" && req.method === "POST") {
         if (req.body.username === USERNAME && req.body.password === PASSWORD) {
             res.json({ 
                 success: true, 

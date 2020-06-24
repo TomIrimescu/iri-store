@@ -8,7 +8,7 @@ export const AuthPrompt = withRouter(authWrapper(class extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorMessage: 'null'
+      errorMessage: null
     }
     this.defaultAttrs = { required: true };
     this.formModel = [
