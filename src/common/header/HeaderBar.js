@@ -3,8 +3,6 @@ import React, { Component } from "react";
 export class HeaderBar extends Component {
 
   render() {
-    console.log(this.props.children);
-
     return (
         <div className="relative flex-shrink-0 flex h-16 bg-white shadow">
           <button
@@ -39,7 +37,7 @@ export class HeaderBar extends Component {
             </div>
             <div className="ml-4 flex items-center md:ml-6">
               <div 
-                className={`${this.props.isAuthenticated ? 'hide' : ''} text-redLight mr-1 sm:inline-block md:inline-block lg:inline-block hidden`}
+                className={`${!this.props.isAuthenticated ? 'hide' : ''} text-redLight mr-1 sm:inline-block md:inline-block lg:inline-block hidden`}
               >
                 Admin Authenticated
               </div>

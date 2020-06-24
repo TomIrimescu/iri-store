@@ -2,14 +2,14 @@ const jwt = require("jsonwebtoken");
 
 const APP_SECRET = "myappsecret", USERNAME = "admin", PASSWORD = "secret";
 
-// const anonOps = [{ method: "GET", urls: ["/api/products", "/api/categories"]},
-//                  { method: "POST", urls: ["/api/orders"]}]
+const anonOps = [{ method: "GET", urls: ["/api/products", "/api/categories"]},
+                 { method: "POST", urls: ["/api/orders"]}]
 
 module.exports = function (req, res, next) {
-    // if (anonOps.find(op => op.method === req.method 
-    //         && op.urls.find(url => req.url.startsWith(url)))) {
-    //     next();
-    // } else 
+    if (anonOps.find(op => op.method === req.method 
+            && op.urls.find(url => req.url.startsWith(url)))) {
+        next();
+    } else 
     
     if (req.url === "/login" && req.method === "POST") {
         if (req.body.username === USERNAME && req.body.password === PASSWORD) {

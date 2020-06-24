@@ -8,12 +8,11 @@ export const AuthPrompt = withRouter(authWrapper(class extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorMessage: null,
-      modal: false
+      errorMessage: 'null'
     }
     this.defaultAttrs = { required: true };
     this.formModel = [
-      { label: "Username", attrs: { placeholder: 'username' } },
+      { label: "Username", attrs: { defaultValue: "admin", placeholder: 'username' } },
       { label: "Password", attrs: { type: "password", placeholder: 'password' } }
     ];
   }
@@ -23,12 +22,6 @@ export const AuthPrompt = withRouter(authWrapper(class extends Component {
       .catch(err => this.setState({ errorMessage: err.message }))
       .then(this.props.history.push("/admin"));
   }
-
-  modalToggleEvent = () => {
-    this.setState((prevState) => {
-      return {modal: !prevState.modal};
-    });
-  };
 
   render() {
     return (

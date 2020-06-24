@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { AuthContext } from "./AuthContext";
-import { authUrl } from "../data/Urls";
+import { authUrl } from './../data/Urls';
 
 export class AuthProvider extends Component {
 
@@ -13,7 +13,8 @@ export class AuthProvider extends Component {
     }
   }
 
-  authenticate = (credentials) => {
+    authenticate = (credentials) => {
+
     return Axios.post(authUrl, credentials).then(response => {
       if (response.data.success === true) {
         this.setState({

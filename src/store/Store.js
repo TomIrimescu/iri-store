@@ -7,8 +7,9 @@ import { PaginationControls } from "../common/pagination/PaginationControls";
 import HeaderBarLinks from '../common/header/HeaderBarLinks';
 import { LinksToAdmin } from './LinksToAdmin';
 import { CartSummary } from "./CartSummary";
+import { authWrapper } from './../auth/AuthWrapper';
 
-export class Store extends Component {
+export const Store = authWrapper(class extends Component {
   state = {
     sidedrawer: false
   }
@@ -83,4 +84,4 @@ export class Store extends Component {
       </div>
     );
   }
-}
+});

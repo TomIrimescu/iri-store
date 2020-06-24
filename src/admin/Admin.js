@@ -10,8 +10,9 @@ import HeaderBarLinks from './../common/header/HeaderBarLinks';
 import { LinksToStore } from './LinksToStore';
 import { AdminNavigation } from './AdminNavigation';
 import { AdminNavigationMobile } from './AdminNavigationMobile';
+import { authWrapper } from './../auth/AuthWrapper';
 
-export class Admin extends Component {
+export const Admin = authWrapper(class extends Component {
   state = {
     sidedrawer: false
   }
@@ -82,18 +83,17 @@ export class Admin extends Component {
           <main className="flex-1 relative z-0 overflow-y-auto pb-6 focus:outline-none hideScrollBar">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               <div className="flex-auto p-4">
-                <Switch>
-                  {/* {
-                    !this.props.isAuthenticated && <Route component={AuthPrompt} />
-                  } */}
-                  <Route path="/admin/auth" component={AuthPrompt} />
-                  <Route path="/admin/orders" component={OrdersConnector} />
-                  <Route path="/admin/products/create" component={ProductCreator} />
-                  <Route path="/admin/products/:id" component={ProductEditor} />
-                  <Route path="/admin/products" component={ProductsConnector} />
-                  <Redirect to="/admin/orders" />
-                </Switch>
-              </div>
+                  <Switch>
+                    {
+                      !this.props.isAuthenticated && <Route component={AuthPrompt} />
+                    }
+                    <Route path="/admin/orders" component={OrdersConnector} />
+                    <Route path="/admin/products/create" component={ProductCreator} />
+                    <Route path="/admin/products/:id" component={ProductEditor} />
+                    <Route path="/admin/products" component={ProductsConnector} />
+                    <Redirect to="/admin/orders" />
+                  </Switch>
+               </div>
             </div>
           </main>
 
@@ -102,4 +102,4 @@ export class Admin extends Component {
       </div>
     );
   }
-}
+});
