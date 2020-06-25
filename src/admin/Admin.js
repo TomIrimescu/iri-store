@@ -31,7 +31,6 @@ export const Admin = authWrapper(class extends Component {
         },
       })
     })
-    console.log(this.props.webToken);
   }
 
   sideDrawerCloseEvent = () => {
