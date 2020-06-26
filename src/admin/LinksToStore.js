@@ -1,23 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import { authWrapper } from './../auth/AuthWrapper';
 
-export const LinksToStore = () => {
-  return (
-    <div className="py-1 rounded-md bg-white shadow-xs">
-      <Link
-        to="/store/products/all/1"
-        onClick={() => console.log('Go to Storefront')}
-        className="adminLink">
-        Storefront (auth)
-      </Link>
-      <Link
-        to="/store/products/all/1"
-        onClick={() => console.log('this.logout')}
-        className="adminLink">
-        Logout (auth)
-      </Link>
-    </div>
-  )
-};
+export const LinksToStore = authWrapper(class extends Component {
 
-export default LinksToStore;
+  render() {
+    console.log(this.props);
+    return (
+      <div className="py-1 rounded-md bg-white shadow-xs">
+        <Link
+          to="/store/products/all/1"
+          onClick={this.props.signout}
+          className="adminLink">
+          Admin Logout
+        </Link>
+        <Link
+          to="/store/products/all/1"
+          className="adminLink">
+          Storefront
+        </Link>
+      </div>
+    );
+  }
+});

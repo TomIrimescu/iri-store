@@ -11,7 +11,7 @@ export class CartDetails extends Component {
     return <div className="m-4">
       <h2 className="text-center text-blue text-xl font-bold mb-4">Your Cart</h2>
       <div className="flex flex-col">
-        <div className="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div className="-my-2 py-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-8 lg:px-8">
           <div className="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
             <table className="min-w-full">
               <thead>
