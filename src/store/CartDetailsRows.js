@@ -58,7 +58,7 @@ export class CartDetailsRows extends Component {
           $9.00
         </td>
         <td className="px-6 py-4 text-right text-sm leading-5 font-medium">
-          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-white bg-redLight hover:bg-blueLight">
+          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-redLight bg-blueLight hover:bg-redLight hover:text-white">
             Remove
           </a>
         </td>
@@ -81,7 +81,7 @@ export class CartDetailsRows extends Component {
           $9.00
         </td>
         <td className="px-6 py-4 text-right text-sm leading-5 font-medium">
-          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-white bg-redLight hover:bg-blueLight">
+          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-redLight bg-blueLight hover:bg-redLight hover:text-white">
             Remove
           </a>
         </td>
@@ -104,7 +104,7 @@ export class CartDetailsRows extends Component {
           $9.00
         </td>
         <td className="px-6 py-4 text-right text-sm leading-5 font-medium">
-          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-white bg-redLight hover:bg-blueLight">
+          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-redLight bg-blueLight hover:bg-redLight hover:text-white">
             Remove
           </a>
         </td>
@@ -115,7 +115,7 @@ export class CartDetailsRows extends Component {
           type="number" value={1000}
           className="inputBox  w-20"
           onChange={(ev) =>
-            this.handleChange(ev)} />
+          this.handleChange(ev)} />
         </td>
         <td className="px-6 py-4 text-sm leading-5 text-gray-500">
           Genuine Chain Saw with Case included
@@ -127,7 +127,7 @@ export class CartDetailsRows extends Component {
           $9.00
         </td>
         <td className="px-6 py-4 text-right text-sm leading-5 font-medium">
-          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-white bg-redLight hover:bg-blueLight">
+          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-redLight bg-blueLight hover:bg-redLight hover:text-white">
             Remove
           </a>
         </td>
@@ -138,7 +138,7 @@ export class CartDetailsRows extends Component {
             type="number" value={1000}
             className="inputBox  w-20"
             onChange={(ev) =>
-              this.handleChange(ev)} />
+            this.handleChange(ev)} />
         </td>
         <td className="px-6 py-4 text-sm leading-5 text-gray-500">
           Genuine Chain Saw with Case included
@@ -150,7 +150,7 @@ export class CartDetailsRows extends Component {
           $9.00
         </td>
         <td className="px-6 py-4 text-right text-sm leading-5 font-medium">
-          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-white bg-redLight hover:bg-blueLight">
+          <a href="/" className="sideBarButton w-16 text-xs mt-0 text-redLight bg-blueLight hover:bg-redLight hover:text-white">
             Remove
           </a>
         </td>

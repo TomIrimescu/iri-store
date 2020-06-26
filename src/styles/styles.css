@@ -979,6 +979,26 @@ video {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.activeButton {
+  cursor: not-allowed;
+  outline: 0;
+  --text-opacity: 1;
+  color: #e5e7eb;
+  color: rgba(229, 231, 235, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #303f9f;
+  background-color: rgba(48, 63, 159, var(--bg-opacity));
+}
+
+.activeButton:hover {
+  --text-opacity: 1;
+  color: #e5e7eb;
+  color: rgba(229, 231, 235, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #303f9f;
+  background-color: rgba(48, 63, 159, var(--bg-opacity));
+}
+
 .bg-white {
   --bg-opacity: 1;
   background-color: #ffffff;
@@ -1061,6 +1081,12 @@ video {
   --bg-opacity: 1;
   background-color: #3f51b5;
   background-color: rgba(63, 81, 181, var(--bg-opacity));
+}
+
+.hover\:bg-redLight:hover {
+  --bg-opacity: 1;
+  background-color: #ec4079;
+  background-color: rgba(236, 64, 121, var(--bg-opacity));
 }
 
 .focus\:bg-blueLight:focus {
@@ -1253,8 +1279,8 @@ video {
   font-size: 1rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
+.text-2xl {
+  font-size: 1.5rem;
 }
 
 .leading-4 {
@@ -1612,12 +1638,6 @@ video {
   color: rgba(233, 30, 98, var(--text-opacity));
 }
 
-.text-blue {
-  --text-opacity: 1;
-  color: #303f9f;
-  color: rgba(48, 63, 159, var(--text-opacity));
-}
-
 .text-indigoLight {
   --text-opacity: 1;
   color: #b3bcf5;
@@ -1634,6 +1654,12 @@ video {
   --text-opacity: 1;
   color: #62155e;
   color: rgba(98, 21, 94, var(--text-opacity));
+}
+
+.hover\:text-white:hover {
+  --text-opacity: 1;
+  color: #ffffff;
+  color: rgba(255, 255, 255, var(--text-opacity));
 }
 
 .hover\:text-gray-400:hover {
@@ -1918,6 +1944,10 @@ video {
 
   .md\:text-xl {
     font-size: 1.25rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
   }
 
   .md\:ml-0 {

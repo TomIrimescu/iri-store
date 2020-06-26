@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { ToggleLink } from "../common/ToggleLink";
-// import { Link } from "react-router-dom";
+// import { ToggleLink } from "../common/ToggleLink";
 
 export class StoreNavigationMobile extends Component {
 
@@ -34,7 +33,6 @@ export class StoreNavigationMobile extends Component {
           </a>
         </nav>
       </div>
-      <ToggleLink />
     </>
   }
 }

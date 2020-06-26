@@ -113,3 +113,15 @@
 .backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.activeButton {
+  @apply cursor-not-allowed;
+  @apply outline-none;
+  @apply text-gray-200;
+  @apply bg-blue;
+}
+
+.activeButton:hover {
+  @apply text-gray-200;
+  @apply bg-blue;
+}

@@ -6,7 +6,7 @@ export class OrdersTable extends Component {
 
     render = () => 
         <div>
-            <h4 className="bg-info text-white text-center p-2">
+            <h4 className="text-center p-2">
                 { this.props.totalSize } Orders
             </h4>
 

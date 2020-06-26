@@ -9,7 +9,7 @@ export class CartDetails extends Component {
 
   render() {
     return <div className="m-4">
-      <h2 className="text-center text-blue text-xl font-bold mb-4">Your Cart</h2>
+      <h2 className="text-center text-red text-2xl md:text-3xl font-bold mb-4">Your Store Cart</h2>
       <div className="flex flex-col">
         <div className="-my-2 py-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-8 lg:px-8">
           <div className="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">

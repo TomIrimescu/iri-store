@@ -25,7 +25,7 @@ export const LinksToAdmin = authWrapper(class extends Component {
           <Link
             to="/admin"
             className="adminLink">
-            Admin Dashboard
+            Dashboard
         </Link>
         }
       </div>
