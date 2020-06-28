@@ -7,7 +7,6 @@ export class AdminNavigation extends Component {
     return <>
       <div className="mt-5 h-0 flex-1 flex flex-col overflow-y-auto">
         <nav className="flex-1 px-2 bg-blue-dark">
-
           <ToggleLink 
             to="/admin/orders"
             className="sideBarButton w-2/3"
@@ -22,7 +21,6 @@ export class AdminNavigation extends Component {
           >
             Products
           </ToggleLink>
-
         </nav>
       </div>
     </>
