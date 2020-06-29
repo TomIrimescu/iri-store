@@ -78,7 +78,13 @@ export const Store = authWrapper(class extends Component {
               </HeaderBarLinks>
           </HeaderBar>
           <PaginationControls />
-          <ProductList />
+            <main className="flex-1 relative z-0 overflow-y-auto pb-6 focus:outline-none hideScrollBar">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                <div className="flex-auto p-4">
+                  <ProductList />
+                </div>
+              </div>
+            </main>
         </div> 
 
       </div>
