@@ -24,7 +24,7 @@ export class PaginationControls extends Component {
                         pageCount={this.props.pageCount} 
                         navigate={ this.props.navigateToPage }/>
                 </div>
-                <div className="form-inline justify-content-center">
+                <div className="flex justify-center">
                     <select className="form-control"
                             onChange={ this.handlePageSizeChange } 
                             value={ this.props.pageSize|| this.pageSizes[0] }>

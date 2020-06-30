@@ -3,20 +3,24 @@ import { StoreNavigationMobile } from "./StoreNavigationMobile";
 import { StoreNavigation } from "./StoreNavigation";
 import { ProductList } from './ProductList';
 import { HeaderBar } from '../common/header/HeaderBar';
+import { ProductPageConnector } from './ProductPageConnector';
 import { PaginationControls } from "../common/pagination/PaginationControls";
 import HeaderBarLinks from '../common/header/HeaderBarLinks';
 import { LinksToAdmin } from './LinksToAdmin';
 import { CartSummary } from "./CartSummary";
 import { authWrapper } from './../auth/AuthWrapper';
 
+const ProductPages = ProductPageConnector(PaginationControls);
+
 export const Store = authWrapper(class extends Component {
   state = {
     sidedrawer: false
   }
 
-  sideDrawerCloseEvent = () => {
-    this.setState({ sidedrawer: false });
-  }
+  handleAddToCart = (...args) => {
+    this.props.addToCart(...args);
+    this.props.history.push("/store/cart");
+  } 
 
   sideDrawerToggleEvent = () => {
     this.setState((prevState) => {
@@ -57,14 +61,16 @@ export const Store = authWrapper(class extends Component {
                 </svg>
               </button>
             </div>
-            <StoreNavigationMobile 
-              sideDrawerCloseClicked={this.sideDrawerCloseEvent} />
+            <StoreNavigationMobile
+              baseUrl="/store/products"
+              categories={ this.props.categories }/>
           </div>
         </div>
 
         <div className="desktopTransition hidden md:flex md:flex-shrink-0">
           <div className="flex flex-col w-64 bg-blueDark">
-          <StoreNavigation />
+          <StoreNavigation baseUrl="/store/products" 
+            categories={ this.props.categories } />
           </div>
         </div>
 
@@ -77,11 +83,12 @@ export const Store = authWrapper(class extends Component {
                 <LinksToAdmin />
               </HeaderBarLinks>
           </HeaderBar>
-          <PaginationControls />
             <main className="flex-1 relative z-0 overflow-y-auto pb-6 focus:outline-none hideScrollBar">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
                 <div className="flex-auto p-4">
-                  <ProductList />
+                  <ProductPages />
+                  <ProductList products={ this.props.products } 
+                        addToCart={ this.handleAddToCart } />
                 </div>
               </div>
             </main>

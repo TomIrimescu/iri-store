@@ -10,14 +10,12 @@ export class AdminNavigation extends Component {
           <ToggleLink 
             to="/admin/orders"
             className="sideBarButton w-2/3"
-            onClick={this.sideDrawerToggleEvent}
           >
             Orders
           </ToggleLink>
           <ToggleLink 
             to="/admin/products"
             className="sideBarButton w-2/3"
-            onClick={this.sideDrawerToggleEvent}
           >
             Products
           </ToggleLink>

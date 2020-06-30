@@ -17,7 +17,8 @@ import { authWrapper } from './../auth/AuthWrapper';
 
 export const Admin = authWrapper(class extends Component {
   state = {
-    sidedrawer: false
+    sidedrawer: false,
+    setActive: false
   }
 
   constructor(props) {
@@ -35,11 +36,18 @@ export const Admin = authWrapper(class extends Component {
 
   sideDrawerCloseEvent = () => {
     this.setState({ sidedrawer: false });
+    this.setActiveToggleEvent();
   }
 
   sideDrawerToggleEvent = () => {
     this.setState((prevState) => {
       return {sidedrawer: !prevState.sidedrawer};
+    });
+  };
+
+  setActiveToggleEvent = () => {
+    this.setState((prevState) => {
+      return {setActive: !prevState.setActive};
     });
   };
 
@@ -78,7 +86,8 @@ export const Admin = authWrapper(class extends Component {
                 </button>
               </div>
               <AdminNavigationMobile 
-                sideDrawerCloseClicked={this.sideDrawerCloseEvent} />
+                sideDrawerCloseClicked={this.sideDrawerCloseEvent}
+                setActive={this.state.setActive} />
             </div>
           </div>
 
