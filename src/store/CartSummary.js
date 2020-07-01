@@ -5,21 +5,25 @@ export class CartSummary extends Component {
 
   getSummary = () => {
     if (this.props.cartItems > 0) {
-      return <span>
-        {this.props.cartItems} item(s),
-                    ${this.props.cartPrice.toFixed(2)}
-      </span>
+      return (
+        <span className="sm:visible md:visible lg:visible invisible text-indigoLight ml-2 mr-2">
+          {this.props.cartItems} item(s)
+          ${this.props.cartPrice.toFixed(2)}
+        </span>
+      )
     } else {
-      return <span
-        className="sm:visible md:visible lg:visible invisible text-indigoLight ml-2 mr-2">
-        Your cart: (empty)
-                  </span>
+      return (
+        <span
+          className="sm:visible md:visible lg:visible invisible text-indigoLight ml-2 mr-2">
+          Your cart: (empty)
+        </span>
+      ) 
     }
   }
 
   getLinkClasses = () => {
     return `p-1 text-indigoLight rounded-full hover:bg-indigoLight hover:text-gray-500 focus:outline-none focus:shadow-outline focus:text-red 
-            ${ this.props.cartItems === 0 ? "cursor-not-allowed opacity-50" : ""}`;
+      ${ this.props.cartItems === 0 ? "cursor-not-allowed opacity-50" : ""}`;
   }
 
   render() {

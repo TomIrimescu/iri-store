@@ -78,7 +78,7 @@ export const Store = authWrapper(class extends Component {
           <HeaderBar 
             isAuthenticated={this.props.isAuthenticated}
             sideDrawerToggleClicked={this.sideDrawerToggleEvent}>
-              <CartSummary />
+              <CartSummary { ...this.props }  />
               <HeaderBarLinks>
                 <LinksToAdmin />
               </HeaderBarLinks>
