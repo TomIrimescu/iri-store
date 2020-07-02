@@ -1603,10 +1603,6 @@ video {
   left: 0;
 }
 
-.top-10 {
-  top: 2.5rem;
-}
-
 .shadow-xs {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
