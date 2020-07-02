@@ -38,7 +38,7 @@ export class Checkout extends Component {
           <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
         </div>
         <div
-          className="my-auto mx-auto bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:p-6 lg:mt-40" 
+          className="my-auto mx-auto bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:p-6" 
         >
           <ValidatedForm formModel={this.formModel}
             defaultAttrs={this.defaultAttrs}
