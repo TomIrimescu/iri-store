@@ -9,8 +9,9 @@ export class CartDetails extends Component {
 
   render() {
     return <div className="m-4 mt-12">
-      <h2 className={`${!this.props.cart || this.props.cart.length === 0 ? 'hidden' : ''} text-center text-red text-2xl md:text-3xl mb-4 italic`}>your great selections</h2>
-      {/* className={`${!this.props.cart || this.props.cart.length === 0 ? 'hidden' : ''} text-center text-red text-2xl md:text-3xl mb-4 italic`} */}
+      <h2 className={`${!this.props.cart || this.props.cart.length === 0 ? 'hidden' : ''} text-center text-red text-2xl md:text-3xl mb-4 italic`}>
+        your great selections
+      </h2>
       <div className="flex flex-col">
         <div className="-my-2 py-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-8 lg:px-8">
           <div className="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">

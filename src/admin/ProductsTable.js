@@ -7,7 +7,7 @@ export class ProductsTable extends Component {
 
     render = () =>     
          <div>
-            <h4 className="text-center p-2">
+            <h4 className="text-center text-gray-200 font-semibold bg-blueLight w-1/3 mx-auto p-2 rounded-lg">
                 { this.props.totalSize } Products
             </h4>
 

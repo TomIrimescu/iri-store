@@ -24,7 +24,7 @@ export class PaginationControls extends Component {
           pageCount={this.props.pageCount}
           navigate={this.props.navigateToPage} />
       </div>
-      <div className="flex justify-center border-b border-gray-300">
+      <div className="flex justify-center border-b mb-4">
         <div className="flex-1"></div>
         <div className="flex-none text-center py-2 pt-0 m-2">
           <div>
