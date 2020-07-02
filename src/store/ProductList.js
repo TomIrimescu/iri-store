@@ -13,7 +13,7 @@ export class ProductList extends Component {
           { p.name }
           </h4>
           <button
-            className="bg-blueDark hover:bg-indigo text-white font-bold px-4 my-2 mr-6 rounded-full"
+            className="bg-blueDark text-white font-bold px-4 my-2 mr-6 rounded-full cursor-not-allowed"
           >
             ${ p.price.toFixed(2) }
           </button>
