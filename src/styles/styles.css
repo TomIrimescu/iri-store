@@ -1417,6 +1417,10 @@ video {
   margin-top: 4rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .-ml-px {
   margin-left: -1px;
 }

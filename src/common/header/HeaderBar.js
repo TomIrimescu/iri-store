@@ -39,7 +39,7 @@ export class HeaderBar extends Component {
               <div 
                 className={`${!this.props.isAuthenticated ? 'hide' : ''} text-redLight mr-1 sm:inline-block md:inline-block lg:inline-block hidden`}
               >
-                Admin Authenticated
+                Admin is Logged In
               </div>
               {this.props.children}
             </div>

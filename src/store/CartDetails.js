@@ -5,7 +5,7 @@ import { HeaderBanner } from './../common/header/HeaderBanner';
 
 export class CartDetails extends Component {
 
-  getLinkClasses = () => `sideBarButton w-48 text-base
+  getLinkClasses = () => `sideBarButton w-48 text-base mb-16
         ${this.props.cartItems === 0 ? "cursor-not-allowed opacity-50" : ""}`;
 
   render() {
