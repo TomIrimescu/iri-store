@@ -2,7 +2,7 @@ import React from "react";
 
 export const HeaderBanner = () => {
   return (
-    <div className="relative flex-shrink-0 flex h-16 bg-white shadow">
+    <div className="relative flex-shrink-0 flex h-16 bg-white shadow mb-8">
       <div className="flex-1 px-4 flex justify-between bg-blue">
         <div className="flex-1 flex">
           <div className="w-full flex md:ml-0">
