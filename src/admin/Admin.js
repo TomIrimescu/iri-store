@@ -22,7 +22,6 @@ export const Admin = authWrapper(class extends Component {
   }
 
   constructor(props) {
-    console.log(GraphQlUrl);
     super(props);
     this.client = new ApolloClient({
       uri: GraphQlUrl,
@@ -52,7 +51,6 @@ export const Admin = authWrapper(class extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <ApolloProvider client={this.client}>
         <div className="h-screen flex overflow-hidden bg-gray-100">

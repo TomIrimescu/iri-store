@@ -29,7 +29,6 @@ export const Store = authWrapper(class extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div className="h-screen flex overflow-hidden bg-gray-100">
 

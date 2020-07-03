@@ -5,7 +5,6 @@ import { authWrapper } from './../auth/AuthWrapper';
 export const LinksToStore = authWrapper(class extends Component {
 
   render() {
-    console.log(this.props);
     return (
       <div className="py-1 rounded-md bg-white shadow-xs">
         <Link

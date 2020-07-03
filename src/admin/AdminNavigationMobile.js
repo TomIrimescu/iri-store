@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 export class AdminNavigationMobile extends Component {
 
   render() {
-    console.log(this.props);
     return <>
       <div className="mt-5 flex-1 h-0 overflow-y-auto">
         <nav className="flex-1 px-2 bg-blueDark mb-8">
