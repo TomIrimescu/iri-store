@@ -19,6 +19,7 @@ export class OrdersRow extends Component {
       </td>
       <td className="px-6 py-4 text-sm leading-5 text-gray-500">
         <button
+          className="outline-none focus:outline-none"
           onClick={this.props.toggleShipped}>
           {this.getShipping(this.props.order)}
           <span>
