@@ -21,7 +21,7 @@
     "redux": "^4.0.1"
   },
   "scripts": {
-    "start": "npm-run-all --parallel reactstart",
+    "start": "SET PORT=3013 && npm-run-all --parallel reactstart",
     "reactstart": "react-scripts start",
     "webservice": "node server.js",
     "build": "react-scripts build",
